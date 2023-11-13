@@ -13,37 +13,38 @@
 
 // grab the form values from $_HTTP_GET_VARS hash
 extract($_GET);
-
 // first compute the output, but only if data has been input
-if(isset($calc)) { // $calc exists as a variable
-    if (!is_numeric($x) || !is_numeric($y)) {
-        $result = "///script encounters a non-numeric value in the x or y parameters///";
-    }
-    else if ($y == 0) {
-        $result = "&infin;";
-    }
-    else {
-        switch($operator) {
-            case '+':
-                $result = $x + $y;
-                break;
-            case '-':
-                $result = $x - $y;
-                break;
-            case '*':
-                $result = $x * $y;
-                break;
-            case '/':
-                $result = $x / $y;
+    function calculate($x, $y, $operator) {
+        if (!is_numeric($x) || !is_numeric($y)) {
+            $result = "///script encounters a non-numeric value in the x or y parameters///";
+            return $result;
+        }
+        else if ($y == 0) {
+            $result = "&infin;";
+            return $result;
+        }
+        else {
+            switch($operator) {
+                case '+':
+                    $result = $x + $y;
+                    return $result;
+                case '-':
+                    $result = $x - $y;
+                    return $result;
+                case '*':
+                    $result = $x * $y;
+                    return $result;
+                case '/':
+                    $result = $x / $y;
+                    return $result;
+            }
         }
     }
-}
-else { // set defaults
-   $x=0;
-   $y=0;
-   $operator="+";
-   $result=0;
-}
+
+    $x = isset($x) ? $x : 0;
+    $y = isset($y) ? $x : 0;
+    $operator = isset($operator) ? $operator : "+";
+    $result = isset($result) ? $result : calculate($x, $y, $operator);
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +70,7 @@ else { // set defaults
           y =  <input type="text" name="y" size="5" value="<?php  print $y; ?>"/>
 
 
-          <input type="submit" name="calc" value="Calculate"/>
+          <input type="submit" name="calc" value="Calculate" action="calculate()" />
        </form>
 
       <!-- print the result -->
