@@ -16,12 +16,26 @@ extract($_GET);
 
 // first compute the output, but only if data has been input
 if(isset($calc)) { // $calc exists as a variable
-   $prod = $x * $y;
+//    $prod = $x * $y;
+    switch($operator) {
+        case '+':
+            $result = $x + $y;
+            break;
+        case '-':
+            $result = $x - $y;
+            break;
+        case '*':
+            $result = $x * $y;
+            break;
+        case '/':
+            $result = $x / $y;
+    }
 }
 else { // set defaults
    $x=0;
    $y=0;
-   $prod=0;
+   $operator="+";
+   $result=0;
 }
 ?>
 
@@ -39,6 +53,12 @@ else { // set defaults
        <form method="get" action="<?php print $_SERVER['PHP_SELF']; ?>">
 
           x = <input type="text" name="x" size="5" value="<?php print $x; ?>"/>
+          <select name="operator" id="operator">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> / </option>
+          </select>
           y =  <input type="text" name="y" size="5" value="<?php  print $y; ?>"/>
 
 
@@ -49,7 +69,7 @@ else { // set defaults
       <!-- print the result -->
       <?php 
       if(isset($calc)) {
-          print "<p>x * y = $prod</p>";
+          print "<p>x * y = $result</p>";
       } 
       ?>
 
