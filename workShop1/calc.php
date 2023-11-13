@@ -54,22 +54,21 @@ else { // set defaults
 
           x = <input type="text" name="x" size="5" value="<?php print $x; ?>"/>
           <select name="operator" id="operator">
-            <option value="+"> + </option>
-            <option value="-"> - </option>
-            <option value="*"> * </option>
-            <option value="/"> / </option>
+            <option value="+" <?php if ($operator == "+") echo 'selected'; ?>> + </option>
+            <option value="-" <?php if ($operator == "-") echo 'selected'; ?>> - </option>
+            <option value="*" <?php if ($operator == "*") echo 'selected'; ?>> * </option>
+            <option value="/" <?php if ($operator == "/") echo 'selected'; ?>> / </option>
           </select>
           y =  <input type="text" name="y" size="5" value="<?php  print $y; ?>"/>
 
 
           <input type="submit" name="calc" value="Calculate"/>
-          <input type="reset" name="clear" value="Clear"/>
        </form>
 
       <!-- print the result -->
       <?php 
       if(isset($calc)) {
-          print "<p>x * y = $result</p>";
+          print "<p>x $operator y = $result</p>";
       } 
       ?>
 
