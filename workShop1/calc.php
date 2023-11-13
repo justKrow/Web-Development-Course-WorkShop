@@ -16,19 +16,26 @@ extract($_GET);
 
 // first compute the output, but only if data has been input
 if(isset($calc)) { // $calc exists as a variable
-//    $prod = $x * $y;
-    switch($operator) {
-        case '+':
-            $result = $x + $y;
-            break;
-        case '-':
-            $result = $x - $y;
-            break;
-        case '*':
-            $result = $x * $y;
-            break;
-        case '/':
-            $result = $x / $y;
+    if (!is_numeric($x) || !is_numeric($y)) {
+        $result = "///script encounters a non-numeric value in the x or y parameters///";
+    }
+    else if ($y == 0) {
+        $result = "&infin;";
+    }
+    else {
+        switch($operator) {
+            case '+':
+                $result = $x + $y;
+                break;
+            case '-':
+                $result = $x - $y;
+                break;
+            case '*':
+                $result = $x * $y;
+                break;
+            case '/':
+                $result = $x / $y;
+        }
     }
 }
 else { // set defaults
