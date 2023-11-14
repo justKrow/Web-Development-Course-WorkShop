@@ -17,32 +17,30 @@ extract($_GET);
     function calculate($x, $y, $operator) {
         if (!is_numeric($x) || !is_numeric($y)) {
             $result = "///script encounters a non-numeric value in the x or y parameters///";
-            return $result;
         }
         else if ($y == 0) {
             $result = "&infin;";
-            return $result;
         }
         else {
             switch($operator) {
                 case '+':
                     $result = $x + $y;
-                    return $result;
+                    break;
                 case '-':
                     $result = $x - $y;
-                    return $result;
+                    break;
                 case '*':
                     $result = $x * $y;
-                    return $result;
+                    break;
                 case '/':
                     $result = $x / $y;
-                    return $result;
             }
         }
+        return $result;
     }
 
     $x = isset($x) ? $x : 0;
-    $y = isset($y) ? $x : 0;
+    $y = isset($y) ? $y : 0;
     $operator = isset($operator) ? $operator : "+";
     $result = isset($result) ? $result : calculate($x, $y, $operator);
 ?>
