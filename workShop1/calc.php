@@ -18,23 +18,12 @@ extract($_GET);
         if (!is_numeric($x) || !is_numeric($y)) {
             $result = "///script encounters a non-numeric value in the x or y parameters///";
         }
-        else if ($y == 0) {
+        else if ($y == 0 && $operator == "/") {
             $result = "&infin;";
         }
         else {
-            switch($operator) {
-                case '+':
-                    $result = $x + $y;
-                    break;
-                case '-':
-                    $result = $x - $y;
-                    break;
-                case '*':
-                    $result = $x * $y;
-                    break;
-                case '/':
-                    $result = $x / $y;
-            }
+            $tempResult = "$x" . "$operator" . "$y";
+            eval("\$result=$tempResult;");
         }
         return $result;
     }
