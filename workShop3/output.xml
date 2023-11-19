@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<data>
+  <record>
+    <quote>The old world is dying, and a new world struggles to be born; now is the time of monsters.</quote>
+    <source>Antonio Gramsci</source>
+    <dob-dod>1891-1937</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Antonio_Gramsci</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/e/e6/Gramsci.png</wpimg>
+    <category>politics</category>
+  </record>
+  <record>
+    <quote>They'll say we're disturbing the peace, but there is no peace. What really bothers them is that we are disturbing the war.</quote>
+    <source>Howard Zinn</source>
+    <dob-dod>1922-2010</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Howard_Zinn</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/e/ef/Howard_Zinn%2C_2009_%28cropped%29.jpg</wpimg>
+    <category>politics</category>
+  </record>
+  <record>
+    <quote>There is no remedy but to love more.</quote>
+    <source>Henry David Thoreau</source>
+    <dob-dod>1817-1862</dob-dod>
+    <wplink>http://en.wikipedia.org/wiki/Henry_David_Thoreau</wplink>
+    <wpimg>http://upload.wikimedia.org/wikipedia/commons/f/f0/Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg</wpimg>
+    <category>love</category>
+  </record>
+  <record>
+    <quote>Work is the curse of the drinking classes.</quote>
+    <source>Oscar Wilde</source>
+    <dob-dod>1854-1900</dob-dod>
+    <wplink>http://en.wikipedia.org/wiki/Oscar_wilde</wplink>
+    <wpimg>http://upload.wikimedia.org/wikipedia/commons/a/a7/Oscar_Wilde_Sarony.jpg</wpimg>
+    <category>humour</category>
+  </record>
+  <record>
+    <quote>The unexamined life is not worth living.</quote>
+    <source>Socrates</source>
+    <dob-dod>c.469-399 B.C.</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Socrates</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/b/bc/Socrate_du_Louvre.jpg</wpimg>
+    <category>philosophy</category>
+  </record>
+  <record>
+    <quote>Whereof one cannot speak, thereof one must be silent.</quote>
+    <source>Ludwig Wittgenstein</source>
+    <dob-dod>1889-1951</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Ludwig_Wittgenstein</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/6/60/35._Portrait_of_Wittgenstein.jpg</wpimg>
+    <category>philosophy</category>
+  </record>
+  <record>
+    <quote>The mind, once stretched by a new idea, never returns to its original dimensions.</quote>
+    <source>Ralph Waldo Emerson</source>
+    <dob-dod>1803-1882</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Ralph_Waldo_Emerson</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/d/d5/Ralph_Waldo_Emerson_ca1857_retouched.jpg</wpimg>
+    <category>education</category>
+  </record>
+  <record>
+    <quote>The triumph of culture is to overpower nationality.</quote>
+    <source>Ralph Waldo Emerson</source>
+    <dob-dod>1803-1882</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Ralph_Waldo_Emerson</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/4/4b/Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg</wpimg>
+    <category>culture</category>
+  </record>
+  <record>
+    <quote>Those who do not remember the past are condemned to repeat it.</quote>
+    <source>George Santayana</source>
+    <dob-dod>1863-1952</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/George_Santayana</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/2/2a/George_Santayana.jpg</wpimg>
+    <category>history</category>
+  </record>
+  <record>
+    <quote>The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.</quote>
+    <source>Issac Asimov</source>
+    <dob-dod>1020-1992</dob-dod>
+    <wplink>https://en.wikipedia.org/wiki/Isaac_Asimov</wplink>
+    <wpimg>https://upload.wikimedia.org/wikipedia/commons/3/34/Isaac.Asimov01.jpg</wpimg>
+    <category>science</category>
+  </record>
+</data>
