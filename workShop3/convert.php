@@ -2,7 +2,7 @@
     function convertToXML($input_file) {
         // Input CSV file
 // Output XML file
-        $outputFilename = 'output.xml';
+        $outputFilename = 'quotes.xml';
 
         // Open CSV file for reading
         $input_file = fopen($input_file, 'r');

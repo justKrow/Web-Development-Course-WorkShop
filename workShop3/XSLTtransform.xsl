@@ -17,7 +17,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <td><xsl:value-of select="quote"/></td>
       <td><xsl:value-of select="source"/></td>
       <td><xsl:value-of select="dob-dod"/></td>
-      <td><xsl:value-of select="category    "/></td>
+      <td><xsl:value-of select="category"/></td>
     </tr>
     </xsl:for-each>
   </table>
