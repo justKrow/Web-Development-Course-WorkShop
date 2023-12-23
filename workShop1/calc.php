@@ -59,7 +59,7 @@ extract($_GET);
 
           <input type="submit" name="calc" value="Calculate" action="calculate()" />
        </form>
-
+    
       <!-- print the result -->
       <?php 
       if(isset($calc)) {
