@@ -13,7 +13,7 @@
   <script lang="text/javascript">
     // future javascript
     function weatherBalloon( cityID ) {
-    var key = '5e66efaeb790ddc51ef6b1a35320460a';
+    var key = '#';
     fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)  
     .then(function(resp) { return resp.json() }) // Convert data to json
     .then(function(data) {

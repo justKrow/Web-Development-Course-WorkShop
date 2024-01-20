@@ -1,79 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Calculator Test1</title>
     <script>
-        function solve(x) {
-            document.getElementById('display').value += x;
-            var display = document.getElementById('display');
-            var resultPreview = document.getElementById('preview');
-            var x = eval(display.value);
-            resultPreview.textContent = x;  
-        }
+      function solve(x) {
+        document.getElementById("display").value += x;
+        var display = document.getElementById("display");
+        var resultPreview = document.getElementById("preview");
+        var x = eval(display.value);
+        resultPreview.textContent = x;
+      }
 
-        function calculate() {
-            document.getElementById('display').value = document.getElementById('preview').textContent;
-            document.getElementById('preview').textContent = "";
-        }
+      function calculate() {
+        document.getElementById("display").value = document.getElementById("preview").textContent;
+        document.getElementById("preview").textContent = "";
+      }
 
-        function clearDisplay() {
-            var display = document.getElementById('display');
-            var resultPreview = document.getElementById('preview');
+      function clearDisplay() {
+        var display = document.getElementById("display");
+        var resultPreview = document.getElementById("preview");
 
-            display.value = '';
-            resultPreview.textContent = '';
-        }
+        display.value = "";
+        resultPreview.textContent = "";
+      }
 
-        function deleteLastDigit() {
-            var display = document.getElementById('display');
-            var resultPreview = document.getElementById('preview');
-            display.value = display.value.toString().slice(0, -1);
-            resultPreview.textContent = resultPreview.textContent.toString().slice(0, -1);
-        }
+      function deleteLastDigit() {
+        var display = document.getElementById("display");
+        var resultPreview = document.getElementById("preview");
+        display.value = display.value.toString().slice(0, -1);
+        resultPreview.textContent = resultPreview.textContent
+          .toString()
+          .slice(0, -1);
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="calculator">
-            <form>
-                <div id="display_case">
-                    <input id="display" type="text" name="display">
-                    <div id="preview" name="result_preview" name="result_preview"></div>
-                </div>
-                <div class="inputs">
-                    <input type="button" class="operator" value="AC" onclick="clearDisplay()">
-                    <input type="button" class="operator" value="DE" onclick="deleteLastDigit()" >
-                    <input type="button" class="operator" value="." onclick="solve('.')" >
-                    <input type="button" class="operator" value="/" onclick="solve('/')" >
-                </div>   
-                <div class="inputs">
-                    <input type="button" value="7" onclick="solve('7')">
-                    <input type="button" value="8" onclick="solve('8')">
-                    <input type="button" value="9" onclick="solve('9')">
-                    <input type="button" class="operator" value="*" onclick="solve('*')" >
-                </div>  
-                <div class="inputs">
-                    <input type="button" value="4" onclick="solve('4')">
-                    <input type="button" value="5" onclick="solve('5')">
-                    <input type="button" value="6" onclick="solve('6')">
-                    <input type="button" class="operator" value="-" onclick="solve('-')" >
-                </div> 
-                <div class="inputs">
-                    <input type="button" value="3" onclick="solve('3')">
-                    <input type="button" value="2" onclick="solve('2')">
-                    <input type="button" value="1" onclick="solve('1')">
-                    <input type="button" class="operator" value="+" onclick="solve('+')">
-                </div>   
-                <div class="inputs">
-                    <input type="button" value="00" onclick="solve('00')">
-                    <input type="button" value="0" onclick="solve('0')">
-                    <input type="button" class="operator" value="=" id="equal_sign" onclick="calculate()" >
-                </div>                                                                                                                   
-            </form>
-        </div>
+      <div class="calculator">
+        <form>
+          <div id="display_case">
+            <input id="display" type="text" name="display" />
+            <div id="preview" name="result_preview" name="result_preview"></div>
+          </div>
+          <div class="inputs">
+            <input
+              type="button"
+              class="operator"
+              value="AC"
+              onclick="clearDisplay()"
+            />
+            <input
+              type="button"
+              class="operator"
+              value="DE"
+              onclick="deleteLastDigit()"
+            />
+            <input
+              type="button"
+              class="operator"
+              value="."
+              onclick="solve('.')"
+            />
+            <input
+              type="button"
+              class="operator"
+              value="/"
+              onclick="solve('/')"
+            />
+          </div>
+          <div class="inputs">
+            <input type="button" value="7" onclick="solve('7')" />
+            <input type="button" value="8" onclick="solve('8')" />
+            <input type="button" value="9" onclick="solve('9')" />
+            <input
+              type="button"
+              class="operator"
+              value="*"
+              onclick="solve('*')"
+            />
+          </div>
+          <div class="inputs">
+            <input type="button" value="4" onclick="solve('4')" />
+            <input type="button" value="5" onclick="solve('5')" />
+            <input type="button" value="6" onclick="solve('6')" />
+            <input
+              type="button"
+              class="operator"
+              value="-"
+              onclick="solve('-')"
+            />
+          </div>
+          <div class="inputs">
+            <input type="button" value="3" onclick="solve('3')" />
+            <input type="button" value="2" onclick="solve('2')" />
+            <input type="button" value="1" onclick="solve('1')" />
+            <input
+              type="button"
+              class="operator"
+              value="+"
+              onclick="solve('+')"
+            />
+          </div>
+          <div class="inputs">
+            <input type="button" value="00" onclick="solve('00')" />
+            <input type="button" value="0" onclick="solve('0')" />
+            <input
+              type="button"
+              class="operator"
+              value="="
+              id="equal_sign"
+              onclick="calculate()"
+            />
+          </div>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

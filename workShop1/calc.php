@@ -22,8 +22,8 @@ extract($_GET);
             $result = "&infin;";
         }
         else {
-            $result = "$x" . "$operator" . "$y";
-            // eval("\$result=$tempResult;");
+            $expression = $x . $operator . $y;
+            eval("\$result = $expression;");    
         }
         return $result;
     }
