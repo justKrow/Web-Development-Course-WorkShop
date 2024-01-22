@@ -34,7 +34,7 @@ $BODY->append($TABLE);
 $thead = $doc->createElement('thead');
 $TABLE->append($thead);
 
-$xml = simplexml_load_file('D:\fullStackEnvironment\laragon\www\Web-Development-Course-WorkShop\quotes.xml');
+$xml = simplexml_load_file('/var/www/html/Web-Development-Course-WorkShop/workShop2/quotes.xml');
 $headings = ['quote', 'source', 'dob-dod', 'wplink', 'wpimg', 'category'];
 $records = $xml->record;
 
@@ -70,4 +70,3 @@ foreach ($records as $record) {
 }
 
 echo $doc->saveHTML();
-?>
